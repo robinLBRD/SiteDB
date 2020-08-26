@@ -1,4 +1,4 @@
 <?php
 function debug($variable){
-    echo "<pre>" . print_r($variable, true) . "</pre>";
+    echo "<p>" . print_r($variable, true) . "</p>";
 }

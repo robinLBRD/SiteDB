@@ -69,6 +69,7 @@ p{
 fieldset{
     margin-left: 15px;
     width: 450px;
+    margin-bottom: 20px;
 }
 td{
     min-width: 220px;
@@ -84,10 +85,10 @@ input[type="date"]{
     width: 163px;
 }
 input[type="email"]{
-    width: 163px;
+    width: 193px;
 }
 select{
-    width: 168px;
+    width: 198px;
 }
 a:hover{
     background-color: darkgoldenrod;
@@ -99,7 +100,6 @@ a:visited{
 td{
     min-width: 250px;
 }
-
-fieldset{
-    margin-bottom: 20px;
+.captcha{
+    margin-left: 100px;
 }
