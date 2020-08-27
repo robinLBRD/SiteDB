@@ -7,6 +7,8 @@
   Version : 01
  */
 
+session_start();
+
 $filterNom = filter_input(INPUT_POST, 'Nom', FILTER_SANITIZE_STRING);
 $filterEmail = filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_STRING);
 $filterObjet = filter_input(INPUT_POST, 'Objet', FILTER_SANITIZE_STRING);
@@ -135,7 +137,7 @@ if (!empty($_POST)) {
                 <label for="confmdp">Confirmation du mot de passe :</label>
                 <p><input type="password" id="confmdp" placeholder="mot de passe" value="<?= $varConfMdp ?>" name="ConfMdp" required="required"></p>
                 <label for="captcha">Etes-vous un robot ?</label>
-                <div class="centrer captcha"><div class="g-recaptcha" id="captcha" data-sitekey="6LfficMZAAAAAFmbPP50iJrZjulsGa5rdfbi8btI"></div>
+                <div class="captcha"><div class="g-recaptcha" id="captcha" data-sitekey="6LfficMZAAAAAFmbPP50iJrZjulsGa5rdfbi8btI"></div>
                 </div><br/>
                 <input type="submit" value="valider" name="submit">
             </form>
@@ -144,6 +146,7 @@ if (!empty($_POST)) {
         <?php
         if ($click >= 1) {
             if (!empty($errors)) {
+                $_SESSION['logedIn'] = false;
                 $compteur = 0;
                 foreach ($errors as $error) {
                     $compteur++;
@@ -157,7 +160,8 @@ if (!empty($_POST)) {
                     debug($error);
                 }
             } else {
-                ?><p>Vous avez bien été enregistrer !</p><?php
+                ?><p>Vous avez bien été enregistré !</p><?php
+                $_SESSION['logedIn'] = true;
             }
         }
         ?>

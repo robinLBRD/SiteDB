@@ -1,7 +1,6 @@
 body{
     width: auto;
     height: auto;
-    background-image: url("./imageDuSite/63380.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -101,5 +100,6 @@ td{
     min-width: 250px;
 }
 .captcha{
-    margin-left: 100px;
+    margin-left: 15px;
+    margin-top: 15px;
 }
