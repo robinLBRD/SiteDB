@@ -1,3 +1,13 @@
+<?php
+/*
+  Auteur : Robin Laborde
+  Nom du projet : SiteDB-MVC
+  Description : site web tout simple qui utilise une base de donnée et qui à une structure M.V.C.
+  Version : 01
+  Classe : I.FDA.P3C
+ */
+?>
+<!-- formulaire de mise à jour d'un post -->
 <p>Update un post !</p>
 <form method="POST">
     <label for="auteur">Auteur :</label>
